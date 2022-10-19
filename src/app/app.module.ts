@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { ViewrecipeComponent } from './viewrecipe/viewrecipe.component';
 import { RouterModule, Routes } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
 const appRoutes:Routes=[
   {
     path:"",component:AddRecipeComponent
@@ -25,7 +26,8 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
