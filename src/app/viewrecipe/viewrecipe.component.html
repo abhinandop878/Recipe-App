@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div *ngIf="status then showData else loadingScreen"></div>
+            <ng-template #showData>
+              <table class="table">
+                <thead>
+                  <tr >
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Prepared By</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Posted Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of recipeData">
+                    <td>{{i.title}}</td>
+                    <td>{{i.description}}</td>
+                    <td>{{i.preparedBy}}</td>
+                    <td>{{i.category}}</td>
+                    <td>{{i.postedDate}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ng-template>
+            <ng-template #loadingScreen>
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
