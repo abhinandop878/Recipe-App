@@ -8,6 +8,7 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { ViewrecipeComponent } from './viewrecipe/viewrecipe.component';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 const appRoutes:Routes=[
   {
     path:"",component:AddRecipeComponent
@@ -27,7 +28,8 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
